@@ -22,6 +22,8 @@ namespace TestProject1.Db
         {
             optionsBuilder.UseSqlServer(
                 @"Server=(localdb)\MSSQLLocalDB;Database=Study;Trusted_Connection=True");
+            // console 로그 출력.
+            optionsBuilder.LogTo(Console.WriteLine);
         }
     }
 }
