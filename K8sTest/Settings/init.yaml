@@ -1,0 +1,40 @@
+﻿# token 발급을 위한 config
+# service account 생성
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: mkim
+  namespace: default
+---
+# kubernetes.io/service-account.name 위치에 사용할 service account 입력
+apiVersion: v1
+kind: Secret
+metadata:
+  name: secret-mkim
+  annotations:
+    kubernetes.io/service-account.name: mkim
+type: kubernetes.io/service-account-token
+---
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: mkim-admin-aggregation
+aggregationRule:
+  clusterRoleSelectors:
+  - matchLabels:
+      kubernetes.io/bootstrapping: rbac-defaults
+rules: []
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: mkim-admin-clusterrolebinding
+subjects:
+- kind: ServiceAccount
+  name: mkim
+  namespace: default
+  apiGroup: ""
+roleRef:
+  kind: ClusterRole
+  name: mkim-admin-aggregation
+  apiGroup: rbac.authorization.k8s.io
