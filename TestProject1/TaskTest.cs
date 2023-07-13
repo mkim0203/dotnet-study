@@ -44,7 +44,7 @@ public class TaskTest
 
         int delayTime = rn.Next(5000);
         Console.WriteLine($"[{seq,-5}] {delayTime}");
-        await Task.Delay(delayTime);
+        await System.Threading.Tasks.Task.Delay(delayTime);
         // Thead.Sleep 사용시 단일 Thread로 묶여버림.
         //System.Threading.Thread.Sleep(delayTime);
 
