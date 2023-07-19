@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "K8sLibrary", "K8sLibrary\K8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "K8sTest", "K8sTest\K8sTest.csproj", "{F0D8197D-5B62-4B24-B80B-3095BCEE4D48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerTest", "DockerTest\DockerTest.csproj", "{788BFFD2-A89B-4442-BC77-B0A24E61F7BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerTest", "DockerTest\DockerTest.csproj", "{788BFFD2-A89B-4442-BC77-B0A24E61F7BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpServer", "UdpServer\UdpServer.csproj", "{BA02B7DE-FBE3-43B1-8D5C-BBF2EEB2DCBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpClient", "UdpClient\UdpClient.csproj", "{1A154B53-B3E4-4485-94E3-C918762E5DFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{788BFFD2-A89B-4442-BC77-B0A24E61F7BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{788BFFD2-A89B-4442-BC77-B0A24E61F7BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{788BFFD2-A89B-4442-BC77-B0A24E61F7BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA02B7DE-FBE3-43B1-8D5C-BBF2EEB2DCBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA02B7DE-FBE3-43B1-8D5C-BBF2EEB2DCBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA02B7DE-FBE3-43B1-8D5C-BBF2EEB2DCBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA02B7DE-FBE3-43B1-8D5C-BBF2EEB2DCBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A154B53-B3E4-4485-94E3-C918762E5DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A154B53-B3E4-4485-94E3-C918762E5DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A154B53-B3E4-4485-94E3-C918762E5DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A154B53-B3E4-4485-94E3-C918762E5DFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

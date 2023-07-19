@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "UdpServer": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "DockerfileRunArguments": "-p 22222:22222/udp"
+
+    }
+  }
+}
