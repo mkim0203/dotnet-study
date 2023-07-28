@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdpServer", "UdpServer\UdpS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdpClient", "UdpClient\UdpClient.csproj", "{1A154B53-B3E4-4485-94E3-C918762E5DFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestapiTest", "RestapiTest\RestapiTest.csproj", "{1ED05B77-A97C-4656-9003-D30E41C5A3A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestapiTest", "RestapiTest\RestapiTest.csproj", "{1ED05B77-A97C-4656-9003-D30E41C5A3A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI_Test", "DI_Test\DI_Test.csproj", "{3283F4B6-D7DD-4891-8C88-4B179FA14509}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{1ED05B77-A97C-4656-9003-D30E41C5A3A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ED05B77-A97C-4656-9003-D30E41C5A3A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ED05B77-A97C-4656-9003-D30E41C5A3A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3283F4B6-D7DD-4891-8C88-4B179FA14509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3283F4B6-D7DD-4891-8C88-4B179FA14509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3283F4B6-D7DD-4891-8C88-4B179FA14509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3283F4B6-D7DD-4891-8C88-4B179FA14509}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
