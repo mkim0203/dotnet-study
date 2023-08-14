@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// DI 로 setting 정보 로드
+// appsettings에서 데이터로드 후 DI 등록
 SampleData sampleData = builder.Configuration.GetSection("SampleData").Get<SampleData>() ?? throw new InvalidOperationException("SampleData configuration");
 builder.Services.AddSingleton<SampleData>(sampleData);
 
@@ -29,9 +29,14 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// 바로 api추가후 사용
 app.MapGet("/minimal-test", (SampleData testData) =>
 {
     return Results.Ok(testData);
+});
+app.MapGet("/minimal-test/{id}", (SampleData testData, string id) =>
+{
+    return Results.Ok(new { Data = testData, Id = id, Time = DateTimeOffset.UtcNow });
 });
 
 // map group 이 있을경우.

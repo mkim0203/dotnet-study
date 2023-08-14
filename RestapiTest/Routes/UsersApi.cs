@@ -13,6 +13,7 @@ public static class UsersApi
 
     private static async ValueTask<Results<Ok<SampleData>, NotFound>> SearchAllUsers(SampleData sample)
     {
+        await Task.Delay(100);
         return TypedResults.Ok(sample);
     }
 }
