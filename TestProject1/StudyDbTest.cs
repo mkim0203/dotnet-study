@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using TestProject1.Db;
 using TestProject1.DbModel;
 
@@ -14,6 +15,12 @@ namespace TestProject1
         {
             Console.WriteLine("db context 按眉 积己");
             db = new StudyDbContext();
+        }
+
+        [Test]
+        public async Task 单捞磐海捞胶积己()
+        {
+            await db.Database.EnsureCreatedAsync().ConfigureAwait(false);
         }
 
         [Test]
@@ -71,6 +78,16 @@ namespace TestProject1
 
             db.Remove(db.User.Single(x => x.Id == "test"));
             db.SaveChanges();
+        }
+
+        [Test]
+        public void 孽府Ouput()
+        {
+            IQueryable datas = db.User.Where(x => x.Id.StartsWith("mkim"));
+
+            string query = datas.ToQueryString();
+
+            Console.WriteLine(query);
         }
     }
 }
