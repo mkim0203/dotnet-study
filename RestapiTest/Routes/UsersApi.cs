@@ -12,8 +12,31 @@ public static class UsersApi
     {
         group.MapGet("/", SearchAllUsers);
         group.MapGet("/file", DownloadAllUsers);
+        group.MapPost("/", AddUser);
+        group.MapDelete("/{id}", DeleteUser);
+        group.MapPut("/{id}", UpdateUser);
         return group;
     }
+
+    private static async ValueTask<Results<Ok, BadRequest<string>>> UpdateUser(string id, SampleData sample)
+    {
+        await Task.Delay(100);
+        return TypedResults.BadRequest($"{id} update fail");
+    }
+
+    private static async ValueTask<Results<Ok, NotFound<string>>> DeleteUser(string id)
+    {
+        await Task.Delay(100);
+        return TypedResults.NotFound($"{id} not found");
+    }
+
+    private static async ValueTask<Results<Ok<SampleData>, NotFound>> AddUser(SampleData sample)
+    {
+        await Task.Delay(100);
+        return TypedResults.Ok(sample);
+    }
+
+
 
     private static async ValueTask<Results<Ok<SampleData>, NotFound>> SearchAllUsers(SampleData sample)
     {
