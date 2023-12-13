@@ -78,7 +78,6 @@
     <Compile Include="ScopeTest.cs" />
     <Compile Include="UniAttrtTest.cs" />
     <Compile Include="Util.cs" />
-    <Compile Include="WebRequestTest.cs" />
     <Compile Include="Validate.cs" />
   </ItemGroup>
   <ItemGroup>

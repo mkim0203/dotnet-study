@@ -3,6 +3,7 @@ using RestapiTest.Models;
 using static System.Net.Mime.MediaTypeNames;
 using System.Text;
 using System.Text.Json;
+using Microsoft.AspNetCore.Mvc;
 
 namespace RestapiTest.Routes;
 
@@ -30,7 +31,7 @@ public static class UsersApi
         return TypedResults.NotFound($"{id} not found");
     }
 
-    private static async ValueTask<Results<Ok<SampleData>, NotFound>> AddUser(SampleData sample)
+    private static async ValueTask<Results<Ok<SampleData>, NotFound>> AddUser([FromBody]SampleData sample)
     {
         await Task.Delay(100);
         return TypedResults.Ok(sample);
